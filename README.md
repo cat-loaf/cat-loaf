@@ -7,7 +7,7 @@ My name is Granth Jain, I am 17, and I am a student of 🖥️computer sciences.
 </p>
 
 <p id="intro_2">
-💫Over the past 7 years, I have been learning to program web technologies, interactive experiences, and data mangagement systems. 
+💫Over the past 6 years, I have been learning to program web technologies, interactive experiences, and data mangagement systems. 
 
 
 </p>
