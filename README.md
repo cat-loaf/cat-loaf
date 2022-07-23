@@ -2,7 +2,7 @@
 <p id="intro">
 <img align="right" alt="Animated Graphic of a man working on a computer" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="333" height="213">
 💫 Hello, and welcome to my GitHub portfolio! 👋
-My name is Granth Jain, I am 17, and I am a student of 🖥️computer sciences. 
+My name is Granth Jain, and I am a 🖥️computer sciences student. 
 
 </p>
 
