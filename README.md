@@ -28,23 +28,7 @@ My name is Granth Jain, and I am a 🖥️computer sciences student.
  - <a href="https://unity.com"> <code><img alt="Unity" height="30" src="https://www.shareicon.net/data/128x128/2015/09/24/106337_3d_512x512.png"></code></a> Unity
 </p>
 <hr>
-<p>
-💾 Some of My Projects:
 
-- 🍦<a href="https://github.com/cat-loaf/ic-shop">ic-shop</a> 
-	- This project is a website, which a client requested show off their dishes for their dessert restaurant. 
-	- The website is currently being hosted at www.icecream-gj.tk/ 
-- 🔀<a href="https://github.com/cat-loaf/randomchoice">randomchoice</a>
-	- This project was the first time I experimented with a technology "ReactJS".
-	- The website is currently being hosted at 
-	cat-loaf.github.io/randomchoice/
-- 🧑‍💻<a href="https://github.com/cat-loaf/cipher-en-de">cipher-en-de</a>
-	- This project is an encryption/decryption tool made with JS
-- 0️⃣<a href="https://github.com/cat-loaf/Hex2Decimal">Hex2Decimal</a>
-	- Hex2Decimal uses JS to convert a hexadecimal value to a decimal number
-- 📈<a href="https://github.com/cat-loaf/Excel-Funcs">Excel-Funcs</a>
-	- This project contains some functions useful for data management, in Excel.
-</p>
 
 
 <hr>
