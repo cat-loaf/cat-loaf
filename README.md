@@ -33,7 +33,7 @@ My name is Granth Jain, and I am a 🖥️computer sciences student.
 
 <hr>
 
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=cat-loaf&show_icons=true&hide=stars,issues,contribs" alt="Granth's Stats" />
+<!--p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=cat-loaf&show_icons=true&hide=stars,issues,contribs" alt="Granth's Stats" />
 
 <hr>
 🔖My Socials:
@@ -41,4 +41,4 @@ My name is Granth Jain, and I am a 🖥️computer sciences student.
 LinkedIn - <a href="https://www.linkedin.com/in/granth-jain-9798501a7/"><img alt="LinkedIn social" height="20" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a> 
 
 YouTube - <a href="https://www.youtube.com/channel/UCwyyuvkRAPJoH1iUKAKSmkA"><img alt="Youtube social" width="20" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c545.png"></a>
-<hr>
+<hr-->
