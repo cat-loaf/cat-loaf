@@ -1,5 +1,4 @@
-Hello, and welcome to my GitHub portfolio!
-My name is Granth J.<br>
+Hello, I'm Granth, and welcome to my GitHub portfolio!<br>
 
 <hr>
 <h3>My Skills: </h3>
