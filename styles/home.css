@@ -1,0 +1,25 @@
+main {
+
+}
+main h1 {
+    color:#9cdcfe;
+}
+main h2 {
+    color:#4a9cd6;
+}
+main h3 {
+    color:#c39178;
+}
+main div.sep {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 span.content:hover, h2 span.content:hover {
+    cursor:pointer;
+    text-decoration:underline;
+}
+h3 span.content {
+    user-select:text;
+}

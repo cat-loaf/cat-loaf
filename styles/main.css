@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+:root {
+    --cursor:url("/images/cursor-resized.png"), auto;
+}
+
+* {
+    font-family:"Funnel Display", serif;
+    cursor:var(--cursor);
+}
+body {
+    margin:0px;
+    padding:0px;
+    background-color: #1f1f1f;
+    color:white;
+    user-select:none;
+}    
+
+a {
+    cursor:inherit;
+    text-decoration: inherit;
+    color:inherit;
+}
+
+main {
+    width:calc(100vw - 2em);
+    padding:1em;
+}
+
+div.bar {
+    color:#a9a9a9;
+    
+    padding-left:1em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+
+    /* border-bottom:1px solid black; */
+    box-shadow:0px 5px 10px -4px black;
+    border-top:1px solid #2b2b2b;
+
+    z-index:0;
+    background-color: #1f1f1f;
+}
+div.bar i.fa-clone {
+    color:#75beff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    display:flex;
+    align-items: center; 
+    gap:.2em;
+}
+
+.markdown {
+    color:#a9a9a9;
+    font-weight:400;
+}
+
+.line-number {
+    display:inline-block;
+    font-size:1rem;
+    color:#6e7681;
+    margin-right:1em;
+    font-weight:400;
+    /* background-color:red; */
+}
+
+div.sep div.hr {
+    color:#529955;
+    font-size:1.2em;
+}
+
+div.column-limit {
+    background-color: rgba(194, 204, 200, 0.5);
+    width:1px;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:44rem;
+    z-index:-1;
+}
+
+div.close {
+    position:absolute;
+    top:.5rem;
+    right:.5rem;
+    width:2em;height:2em;
+    line-height:2em;
+    text-align: center;
+    cursor: pointer;
+    border-radius:5px;
+    color:#d7d7d7;
+}
+div.close:hover {
+    background-color:#313232;
+    /* color:red; */
+}
+div.close i {
+    cursor: pointer;
+    transform:translateY(1px);
+}
