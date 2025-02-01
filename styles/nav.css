@@ -8,6 +8,10 @@ nav {
     display:flex;
     justify-content: left;
     /* gap:2em; */
+    position:fixed;
+    width:100vw;
+    left:0;
+    top:0;
 }
 
 nav>div {
@@ -59,6 +63,9 @@ nav>div.active i.fa-xmark {
 }
 nav>div:hover i.fa-xmark {
     display:initial;
+}
+nav>div>a {
+    cursor:pointer;
 }
 
 
