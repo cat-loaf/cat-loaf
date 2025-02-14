@@ -20,9 +20,9 @@ function createNav() {
     const nav = document.createElement('nav');
     const currentPath = window.location.pathname;
     const navItems = [
-        { href: '/', iconClass: 'fa-brands fa-html5', text: 'home.html' },
-        { href: '/projects/', iconClass: 'fa-brands fa-js', text: 'projects.js' },
-        { href: '/contact/', iconClass: 'fa-brands fa-css3', text: 'contact.css' }
+        { href: '/cat-loaf/', iconClass: 'fa-brands fa-html5', text: 'home.html' },
+        { href: '/cat-loaf/projects/', iconClass: 'fa-brands fa-js', text: 'projects.js' },
+        { href: '/cat-loaf/contact/', iconClass: 'fa-brands fa-css3', text: 'contact.css' }
     ];
 
     navItems.forEach(item => {
