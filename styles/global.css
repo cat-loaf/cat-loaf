@@ -104,19 +104,30 @@ h1,h2,h3,h4,h5,h6 {
     color:#6e76817f;
 }
 
-div.sep div.hr {
+.sep, .hr {
     color:#529955;
     font-size:1.2em;
 }
 
+.comment {
+    color:#6e7681;
+    font-style: italic;
+    margin-right:0.2em;
+}
+
 div.column-limit {
-    background-color: rgba(194, 204, 200, 0.5);
+    background-color: rgba(194, 204, 200, 0.2);
     width:1px;
     height:100vh;
     position:fixed;
     top:0;
     left:39rem;
     z-index:-1;
+}
+@media (max-width: 768px) {
+    div.column-limit {
+        display: none;
+    }
 }
 
 div.close {
@@ -236,4 +247,43 @@ div.close i {
 }
 .fa-triangle-exclamation {
     color:#d7ba7d;
+}
+.carousel {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    max-width: 25em;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    width: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.2s;
+    color: white;
+    border: none;
+    border-radius:10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-button i {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
 }

@@ -1,0 +1,49 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    border-radius: 0.5em;
+    width:30em;
+    margin-left:2.2em;
+    transform:translateY(-5em);
+    margin-bottom:2em;
+    padding-bottom:2em;
+    padding-top: 2em;
+    outline:1px solid #8888887f;
+    cursor: pointer;
+}
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.project-subtitle {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.project-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:4em;
+    margin-top: 1em;
+}
+.project-link {
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+.project-link a {
+    color: #2b9fdd;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    transition: color 0.2s;
+}
+.project-link a i {
+    color:white !important;
+}
+.project-link a:hover {
+    color: #6194f8;
+}
