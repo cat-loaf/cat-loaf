@@ -16,16 +16,15 @@ function createNavItem(href, iconClass, text, isActive = false) {
     return div;
 }
 
-function createNav() {
+function createNav(links = [
+    { href: '/cat-loaf/',          iconClass: 'fa-brands fa-html5', text: 'home.html' },
+    { href: '/cat-loaf/projects/', iconClass: 'fa-brands fa-js',    text: 'projects.js' },
+    { href: '/cat-loaf/contact/',  iconClass: 'fa-brands fa-css3',  text: 'contact.css' }
+]) {
     const nav = document.createElement('nav');
     const currentPath = window.location.pathname;
-    const navItems = [
-        { href: '/cat-loaf/', iconClass: 'fa-brands fa-html5', text: 'home.html' },
-        { href: '/cat-loaf/projects/', iconClass: 'fa-brands fa-js', text: 'projects.js' },
-        { href: '/cat-loaf/contact/', iconClass: 'fa-brands fa-css3', text: 'contact.css' }
-    ];
 
-    navItems.forEach(item => {
+    links.forEach(item => {
         const isActive = currentPath === item.href;
         nav.appendChild(createNavItem(item.href, item.iconClass, item.text, isActive));
     });
@@ -129,7 +128,7 @@ function appendCarousel(selector, imagePaths) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.appendChild(createNav());
+    // document.body.appendChild(createNav());
     document.body.appendChild(createBreadcrumb());
     
     const { columnLimitDiv, closeDiv, bottomVignetteDiv } = createAdditionalElements();
