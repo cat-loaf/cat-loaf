@@ -25,9 +25,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const nav = createNav([
-            { href: './',          iconClass: 'fa-brands fa-html5', text: 'home.html' },
-            { href: './projects/', iconClass: 'fa-brands fa-js',    text: 'projects.js' },
-            { href: './contact/',  iconClass: 'fa-brands fa-css3',  text: 'contact.css' }
+            { href: window.location.href,          iconClass: 'fa-brands fa-html5', text: 'home.html' },
+            { href: `${window.location.href}/projects`, iconClass: 'fa-brands fa-js',    text: 'projects.js' },
+            { href: `${window.location.href}/contact`,  iconClass: 'fa-brands fa-css3',  text: 'contact.css' }
         ]);
             document.body.insertBefore(nav, document.body.firstChild);
         });
