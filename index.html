@@ -3,281 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home.html</title>
-
-    <link rel="shortcut icon" href="./images/html5.png" type="image/x-icon">
-    
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/home.css">
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <script src="./components/loader.js"></script>
-
-    <meta property="og:title" content="Granth Jain - Software Developer">
-    <meta property="og:description" content="I'm Granth Jain, a software developer with a passion for building web apps and backend systems.">
-    <meta property="og:image" content="./images/icon_high_res.png">
-    <meta property="og:url" content="https://cat-loaf.github.io/cat-loaf/">
-    <meta property="og:type" content="website">
-
+    <title>Granth Jain</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const nav = createNav([
-            { href: `https://${window.location.host}`,          iconClass: 'fa-brands fa-html5', text: 'home.html' },
-            { href: `https://${window.location.host}/projects`, iconClass: 'fa-brands fa-js',    text: 'projects.js' },
-            { href: `https://${window.location.host}/contact`,  iconClass: 'fa-brands fa-css3',  text: 'contact.css' }
-        ]);
-            document.body.insertBefore(nav, document.body.firstChild);
-        });
-    </script>
-    <div class="bar">
-        <i class="fa-solid fa-clone"></i> <i class="fa-solid fa-angle-right"></i> granth-jain <i class="fa-solid fa-angle-right"></i> home.html
-    </div>
+    <header>
+        <div class="items">
+            <a class="logo" href="#" id="hero-logo-link">
+                <img src="./images/icon_high_res.png" alt="Granth Jain Logo">
+            </a>
+            <a class="item is_active" href="#" id="home-link">
+                Home
+            </a>
+            <a class="item" href="#" id="work-link">
+                My work
+            </a>
+            <a class="item" href="#" id="socials-link">
+                Socials
+            </a>
+        </div>
+    </header>
     <main>
-        <div class="name" id="name">
-            <h1>
-                <div class="line-number">1</div>
-                <span class="markdown">#</span> 
-                <span class="content"><div class="link no-col"><a href="#name">Granth Jain</a></div></span>
-            </h1>
-            <h3>
-                <div class="line-number">2</div>
-                <!-- <span class="markdown">###</span>  -->
-                <span class="markdown">###</span>
-                <span class="content">Software Developer</span> 
-            </h3>
-        </div>
-    
-        <div>
-            <div class="line-number empty">3</div>
-        </div>
-        <div class="sep">
-            <div class="line-number ">4</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number empty">5</div>
-        </div>
-
-        <div class="aboutme" id="aboutme">
-            <h2>
-                <div class="line-number">6</div>
-                <span class="markdown">##</span>
-                <span class="content"><div class="link no-col"><a href="#aboutme">Hey there!</a></div> 👋</span>
-            </h2>
-            <div>
-                <div class="line-number">7</div>
-                <span class="content">I'm <span class="string">Granth Jain</span>. Nice to see <span class="alt" style="text-decoration:underline">you</span> here!</span>
-            </div>
-            <div>
-                <div class="line-number">8</div>
-                <span class="content">I'm a software developer with a passion for building <span class="string">web apps</span> and </span>
-            </div>
-            <div>
-                <div class="line-number">9</div>
-                <span class="content" ><span class="string">backend systems</span>—though I started my coding journey in <span class="function">Java()</span> and</span>
-            </div>
-            <div>
-                <div class="line-number long">10</div>
-                <span class="content" ><span class="function">python()</span> before diving deep into <span class="ts">JavaScript()</span> and other web</span>
-            </div>
-            <div>
-                <div class="line-number long">11</div>
-                <span class="content" >technologies. Over time, I've explored a variety of technologies, from</span>
-            </div>
-            <div>
-                <div class="line-number long">12</div>
-                <span class="content" ><span class="string">embedded systems</span> to <span class="string">full-stack development</span>, and I love working with</span>
-            </div>
-            <div>
-                <div class="line-number long">13</div>
-                <span class="content" ><span class="function">python()</span>, <span class="alt">SQLite</span>, <span class="ts">JavaScript()</span> and <span class="ts">typeScript()</span> : <span class="alt ligature">() => {}</span>.</span>
+        <div class="hero" id="hero">
+            <div class="hero-text">
+                <div class="hero-title">
+                    <h1>Granth Jain</h1>
+                    <sub>Software Developer</sub>
+                </div>
+                <div class="hero-list">
+                    <div class="item">Software</div>
+                    <div class="item">Web</div>
+                    <div class="item">Embedded</div>
+                    <div class="item">Full Stack</div>
+                </div>
             </div>
         </div>
-
-        <div>
-            <div class="line-number long empty">14</div>
+        <div class="about" id="home">
+            <h2>Who am I?</h2>
+            <p>
+                I am a software developer with a passion for creating innovative solutions. My expertise spans across software development, web technologies, embedded systems, and artificial intelligence. I enjoy tackling complex problems and delivering high-quality results.
+            </p>
         </div>
-        <div class="sep">
-            <div class="line-number long">15</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number long empty">16</div>
-        </div>
-
-        <div class="whatIBuild" id="build">
-            <h2>
-                <div class="line-number long">17</div>
-                <span class="markdown">##</span>
-                <span class="content"><div class="link no-col"><a href="#build">What I Build</a></div> 🚀</span>
-            </h2>
-            <div>
-                <div class="line-number long">18</div>
-                <span class="content">I used to do a lot of <span class="function">game development</span>, but now I focus on <span class="function">web</span></span>
+        <div class="work card" id="work">
+            <h2>My Work</h2>
+            <div class="view-github">
+                <a href="https://github.com/cat-loaf" target="_blank" class="external-link" style="color:#3d88cf">View more on GitHub</a>
             </div>
-            <div>
-                <div class="line-number long">19</div>
-                <span class="content"><span class="function">applications</span> and <span class="function">backend architecture</span>. Some of my favorite</span>
+            <div class="work-showcases">
+                <div class="work-showcase">
+                    <div class="work-title">
+                        <a href="https://github.com/cat-loaf/pixi-painter" target="_blank" class="external-link"><h3>pixi painter</h3></a>
+                        <sub>A pixel art painter made in Python</sub>
+                    </div>
+                    <div class="image-carousel">
+                        <div class="image-slide active">
+                            <img src="./images/pixi-painter/0.png" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/pixi-painter/1.png" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/pixi-painter/2.png" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/pixi-painter/3.png" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/pixi-painter/4.png" style="width:20rem; height:auto;">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <div class="line-number long">20</div>
-                <span class="content">projects include:</span>
-            </div>
-            <div>
-                <div class="line-number long empty">21</div>
-            </div>
-            <div>
-                <div class="line-number long">22</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span> 🎨 <span class="function">PxAPainter</span> - A pixel art program built in <span class="function">python()</span>
-            </div>
-            <div>
-                <div class="line-number long">23</div>
-                <span class="content" style="margin-left:3em;">using <span class="alt">pygame</span> and <span class="alt">sci-kit</span>.
-                </span>
-            </div>
-            <div>
-                <div class="line-number long empty">24</div>
-            </div>
-            <div>
-                <div class="line-number long">25</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span> 🛠️ <span class="function">Make-It Productivity Hub</span> - A feature-packed
-            </div>
-            <div>
-                <div class="line-number long">26</div>
-                <span class="content" style="margin-left:3em;">tool for <span class="alt">task management</span>, <span class="alt">knowledge sharing</span>, <span class="alt">forums</span>, and</span>
-            </div>
-            <div>
-                <div class="line-number long">27</div>
-                <span class="content" style="margin-left:3em;"><span class="alt">analytics</span>, built with <span class="ts">React</span>, <span class="ts">JavaScript</span>, <span class="alt">HTML</span>, and <span class="alt">CSS</span>.</span>
-            </div>
-        </div>
-
-        <div>
-            <div class="line-number long empty">28</div>
-        </div>
-        <div class="sep">
-            <div class="line-number long">29</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number long empty">30</div>
-        </div>
-
-        <div class="goals" id="goals">
-            <h2>
-                <div class="line-number long">31</div>
-                <span class="markdown">##</span>
-                <span class="content"><div class="link no-col"><a href="#build">Goals</a></div> 🎯</span>
-            </h2>
-            <div>
-                <div class="line-number long">32</div>
-                <span class="content">I'm working towards becoming either a <span class="function">full-stack developer</span> or a</span>
-            </div>
-            <div>
-                <div class="line-number long">33</div>
-                <span class="content"><span class="function">backend developer</span>, two fields that I find incredibly interesting.</span>
-            </div>
-            <div>
-                <div class="line-number long">34</div>
-                <span class="content">They <span class="string">both</span> encompass my love for <span class="alt">low-level systems</span> and <span class="alt">high-level</span></span>
-            </div>
-            <div>
-                <div class="line-number long">35</div>
-                <span class="content"><span class="alt">problem-solving</span>.</span>
+            <div class="work-showcases">
+                <div class="work-showcase">
+                    <div class="work-title">
+                        <h3>mint-tab</h3>
+                        <sub>A minimalist new tab experience extension</sub>
+                    </div>
+                    <div class="image-carousel">
+                        <div class="image-slide active">
+                            <img src="./images/min-tab/0.jpeg" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/min-tab/1.jpeg" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/min-tab/2.jpeg" style="width:20rem; height:auto;">
+                        </div>
+                        <div class="image-slide">
+                            <img src="./images/min-tab/3.jpeg" style="width:20rem; height:auto;">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div>
-            <div class="line-number long empty">36</div>
-        </div>
-        <div class="sep">
-            <div class="line-number long">37</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number long empty">38</div>
-        </div>
-
-        <div class="beyond" id="beyond">
-            <h2>
-                <div class="line-number long">39</div>
-                <span class="markdown">##</span>
-                <span class="content"><div class="link no-col"><a href="#beyond">Beyond Code</a></div> 🌱</span>
-            </h2>
-            <div>
-                <div class="line-number long">40</div>
-                <span class="content">When I'm not <span class="function">coding()</span>, I'm <span class="string">usually</span> :</span>
+        <div class="socials card" id="socials">
+            <h2>Connect with Me</h2>
+            <p>
+                Feel free to hit me up on any of the platforms below. I love connecting with fellow developers and tech enthusiasts!
+            </p>
+            <div class="socials-list">
+                <a style="color:#3d88cf;" class="external-link" href="https://github.com/cat-loaf/">GitHub</a>
+                <a style="color:#3d88cf;" class="external-link" href="https://www.linkedin.com/in/granth-jain">LinkedIn</a>
             </div>
-            <div>
-                <div class="line-number long">41</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 📚 <span class="ts">Reading</span> a book</span>
-            </div>
-            <div>
-                <div class="line-number long">42</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 👾 <span class="alt">Making</span> pixel art</span>
-            </div>
-            <div>
-                <div class="line-number long">43</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 🎮 <span class="string no-it">Playing</span> video games</span>
-            </div>
-            <div>
-                <div class="line-number long">44</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 🏋️ <span class="ts">Going</span> to the gym</span>
-            </div>
-            <div>
-                <div class="line-number long">45</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 📚 <span class="alt">Learning</span> new things</span>
-            </div>
-            <div>
-                <div class="line-number long">46</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 📚 <span class="string no-it">Studying</span> or <span class="ts">working</span> on Uni assignments</span>
-            </div>
-            <div>
-                <div class="line-number long">47</div>
-                <span class="markdown">— <span class="ligature">[x]</span></span>
-                <span class="content"> 💸 <span class="alt">Learning</span> about investing</span>
-            </div>
-        </div>
-
-        <div>
-            <div class="line-number long empty">48</div>
-        </div>
-        <div class="sep">
-            <div class="line-number long">49</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number long empty">50</div>
-            <span class="markdown ligature">[[EOF]]</span> 
-            <span class="content" style="opacity:50%; margin-left:1em; text-decoration:underline; cursor:pointer">
-                <a href="./projects" class="ligature">Go to next file -></a>
-            </span>
-        </div>
-        <div class="sep">
-            <div class="line-number long empty" style="opacity:75%;">51</div>
-            <div class="hr">/* ———————— */</div>
-        </div>
-        <div>
-            <div class="line-number long empty" style="opacity:60%;">52</div>
-        </div>
-        <div>
-            <div class="line-number long empty" style="opacity:45%;">53</div>
-        </div>
-        <div>
-            <div class="line-number long empty" style="opacity:30%;">54</div>
-        </div>
-        <div>
-            <div class="line-number long empty"style="opacity:15%;">55</div>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Granth Jain. All rights reserved.</p>
+            <p>Made with ❤️ using HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
