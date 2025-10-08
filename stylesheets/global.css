@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --border: 1.5px solid #888;
+    --text-col: #333;
+}
