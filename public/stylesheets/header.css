@@ -1,4 +1,7 @@
 header {
+    z-index: 1000;
+    font-size: 1.3rem;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -35,8 +38,13 @@ header {
         color: var(--text-col);
         text-decoration: none;
         border-bottom: var(--border);
-        width: 20vw;
+        width: 30vw;
         text-align: right;
+
+        &:hover {
+            background-color: #f5f5f5;
+            color: #333;
+        }
     }
 }
 
@@ -66,6 +74,12 @@ header {
             border-bottom: none;
             width: initial;
             text-align: left;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                background-color: #f0f0f0;
+                color: #333;
+            }
         }
 
         button {
