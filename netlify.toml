@@ -24,8 +24,3 @@ from = "/cv"
 to = "/public/assets/Granth_Jain_CV.pdf"
 status = 200
 
-[[redirects]]
-from = "https://me.granth.one/*"
-to = "https://granth.one/:splat"
-status = 301
-force = true
