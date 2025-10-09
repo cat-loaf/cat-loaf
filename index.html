@@ -3,9 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Granth Jain</title>
+    <title>Granth Jain - Software & DevOps Engineer</title>
+    <link rel="shortcut icon" href="/public/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/stylesheets/header.css">
+    <link rel="stylesheet" href="/public/stylesheets/global.css">
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <link rel="stylesheet" href="/public/stylesheets/footer.css">
+
+    <script src="public/scripts/nav.js"></script>
 </head>
 <body>
-    Under Construction
+    <header>
+        <div><img src="public/images/icon.png" alt="Icon"></div>
+        <nav class="navHidden">
+            <a href="#hero"><div>Home</div></a>
+            <a href="#about"><div>About</div></a>
+            <a href="#experience"><div>Experience</div></a>
+            <a href="projects"><div>Projects</div></a>
+            <button type="button" onclick="toggleNav()">Menu</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Granth Jain</h1>
+                <h2>Software & DevOps Engineer</h2>
+                <p class="hero-description">
+                    Hi I'm Granth!
+                    <br> I'm a Software Engineer, based in the UK, I'm currently studying Computer Science at Loughborough University.
+                    <br>I enjoy programming and building tools that make life easier.
+                    <!-- Building scalable solutions and streamlining workflows with expertise in full-stack development, 
+                    DevOps automation, and cloud infrastructure. -->
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:jain@granth.one" class="cta-button">Contact Me</a>
+                    <a href="/cv" class="cta-button secondary" target="_blank">Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a passionate Software & DevOps Engineer based in London, currently pursuing my BSc in Computer Science 
+                            at Loughborough University. With experience spanning from startup environments to corporate roles, 
+                            I specialize in creating robust, scalable solutions and optimizing development workflows.
+                        </p>
+                        <p>
+                            I have experience in full-stack development, CI/CD pipeline design, cloud infrastructure management, 
+                            and building custom tools that improve developer productivity. I thrive in collaborative environments 
+                            and enjoy tackling complex technical challenges.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <ul>
+                            <li><strong>Email:</strong> <a href="mailto:jain@granth.one">jain@granth.one</a></li>
+                            <li><strong>Location:</strong> London, UK</li>
+                            <li><strong>GitHub:</strong> <a href="https://github.com/cat-loaf" target="_blank">cat-loaf</a></li>
+                            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/granth-jain" target="_blank">granth-jain</a></li>
+                            <li><strong>CV:</strong> <a href="/cv" target="_blank">me.granth.one/cv</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aug 2025 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Software & DevOps Engineer</h3>
+                            <h4>Open Consulting • London, UK</h4>
+                            <ul>
+                                <li>Designed and maintained DevOps workflows including CI/CD pipelines and Infrastructure as Code</li>
+                                <li>Utilized GitHub Actions, Docker, and containerization best practices for streamlined deployments</li>
+                                <li>Collaborated with cross-functional teams to ensure reliable software delivery</li>
+                                <li>Optimized release management processes, reducing deployment errors and improving delivery speed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2025 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Software Engineer</h3>
+                            <h4>Kuroza • Loughborough, UK</h4>
+                            <ul>
+                                <li>Collaborated on company website design and development with focus on branding alignment</li>
+                                <li>Built core business logic for mobile app using Dart & Flutter/JavaScript</li>
+                                <li>Developed backend systems with Firebase & Firestore for improved reliability</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Sep 2023 - Dec 2024</div>
+                        <div class="timeline-content">
+                            <h3>Freelance Software Developer</h3>
+                            <h4>Self-employed • London, UK</h4>
+                            <ul>
+                                <li><strong>Inventory Management & E-Commerce Integration:</strong> Built custom inventory system with real-time stock syncing, reducing discrepancies by 60%</li>
+                                <li><strong>Pixel Art Editor:</strong> Developed standalone Python desktop app with custom 2D rendering engine</li>
+                                <li><strong>Productivity Hub for SMEs:</strong> Created full-stack platform improving team communication and deadline adherence by ~30%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jun 2018 - Apr 2022</div>
+                        <div class="timeline-content">
+                            <h3>AP Computer Science Tutor</h3>
+                            <h4>Self-employed • Florida, USA</h4>
+                            <ul>
+                                <li>Provided personalized computer science tutoring to high school students</li>
+                                <li>Specialized in AP Computer Science curriculum and exam preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-content">
+                        <h3>BSc Computer Science</h3>
+                        <h4>Loughborough University • Loughborough, UK</h4>
+                        <p class="education-dates">2022 - Predicted 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>VSCode Tasks Integration Extension</h3>
+                        <p>A VS Code extension that organizes workspace tasks in an intuitive tree-view interface. Features automatic task grouping, one-click execution, and visual status indicators.</p>
+                        <div class="project-tech">VS Code API • TypeScript • Published Extension</div>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=GranthJ.vscode-task-view" target="_blank" class="project-link">View on Marketplace →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Python Code Jam 2025</h3>
+                        <p>Theme: "Wrong tool for the job" – A creative website for teaching HTML, built entirely in Python. Showcases unconventional solutions and creative workarounds.</p>
+                        <div class="project-tech">Python • JSON • Creative Problem Solving</div>
+                        <a href="https://github.com/cat-loaf/code-jam-2025/tree/main" target="_blank" class="project-link">View Repository →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>VeggieInventory</h3>
+                        <p>Custom inventory management system for SME client featuring stock tracking, category-based filtering, and real-time website integration.</p>
+                        <div class="project-tech">Custom Backend • Real-time Sync • Client Solution</div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>PixiPainter</h3>
+                        <p>Python-based pixel art editor built from scratch with customizable palettes, multiple brush types, and custom file format support.</p>
+                        <div class="project-tech">Python • 2D Graphics • Custom UI Library</div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>MakeItAll Productivity Hub</h3>
+                        <p>Full-stack productivity platform integrating chat systems, documentation viewer, and modular analytics dashboards.</p>
+                        <div class="project-tech">Full-Stack • Real-time Features • Analytics</div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Minimalist NewTab</h3>
+                        <p>Highly customizable browser extension that replaces the default New Tab page with quick-access links and personalization options.</p>
+                        <div class="project-tech">Chrome Extension • JavaScript • UI/UX</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="projects">All Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="mailto:jain@granth.one">jain@granth.one</a></li>
+                    <li><a href="https://github.com/cat-loaf" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/granth-jain" target="_blank">LinkedIn</a></li>
+                    <li><a href="/cv" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hey There!</h3>
+                <p>Feel free to reach out if you'd like to connect!</p>
+                <p>Always open to new opportunities and collaborations :)</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Granth Jain. All rights reserved.</p>
+            <p class="font-attribution">
+                Website uses <a href="https://www.dafont.com/alagard.font" target="_blank">Alagard font</a> by Hewett Tsoi
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Granth Jain</title>
+    <link rel="shortcut icon" href="/public/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/stylesheets/header.css">
+    <link rel="stylesheet" href="/public/stylesheets/global.css">
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <link rel="stylesheet" href="/public/stylesheets/footer.css">
+    <link rel="stylesheet" href="/public/stylesheets/projects.css">
+
+    <script src="public/scripts/nav.js"></script>
+    <script src="public/scripts/slideshow.js"></script>
+</head>
+<body>
+    <header>
+        <div><img src="public/images/icon.png" alt="Icon"></div>
+        <nav class="navHidden">
+            <a href="index.html"><div>Home</div></a>
+            <a href="index.html#about"><div>About</div></a>
+            <a href="index.html#experience"><div>Experience</div></a>
+            <a href="#projects"><div>Projects</div></a>
+            <button type="button" onclick="toggleNav()">Menu</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Projects Hero Section -->
+        <section id="projects-hero" class="projects-hero">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p class="projects-subtitle">A collection of professional work, freelance projects, and personal experiments</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="project-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Minimalist NewTab</h3>
+                        </div>
+                        <div class="project-slideshow" id="vscode-slideshow">
+                            <div class="slideshow-container">
+                                <div class="slide active">
+                                    <img src="public/images/min-tab/0.jpeg" alt="VSCode Extension Screenshot 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/min-tab/1.jpeg" alt="VSCode Extension Screenshot 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/min-tab/2.jpeg" alt="VSCode Extension Screenshot 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/min-tab/3.jpeg" alt="VSCode Extension Screenshot 4">
+                                </div>
+                                <button class="slide-btn prev" onclick="changeSlide('vscode-slideshow', -1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M11 1L5 8l6 7V1z"/>
+                                    </svg>
+                                </button>
+                                <button class="slide-btn next" onclick="changeSlide('vscode-slideshow', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M5 1v14l6-7-6-7z"/>
+                                    </svg>
+                                </button>
+                                <div class="slide-indicators">
+                                    <span class="indicator active" onclick="currentSlide('vscode-slideshow', 1)"></span>
+                                    <span class="indicator" onclick="currentSlide('vscode-slideshow', 2)"></span>
+                                    <span class="indicator" onclick="currentSlide('vscode-slideshow', 3)"></span>
+                                    <span class="indicator" onclick="currentSlide('vscode-slideshow', 4)"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>A highly customizable Chrome/Edge extension that replaces the default New Tab page with quick-access links and advanced personalization options. Focus on clean design and user productivity. Features quick-access bookmark system, customizable themes and layouts, weather integration, keyboard shortcuts, and data sync across devices.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/cat-loaf/minimalist-newtab" target="_blank" class="project-link primary">View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Python Code Jam 2025</h3>
+                        </div>
+                        <div class="project-slideshow" id="python-slideshow">
+                            <div class="slideshow-container">
+                                <div class="slide active">
+                                    <img src="public/images/py-html/0.jpeg" alt="Python Code Jam Screenshot 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/py-html/1.gif" alt="Python Code Jam Screenshot 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/py-html/2.jpeg" alt="Python Code Jam Screenshot 3">
+                                </div>
+                                <button class="slide-btn prev" onclick="changeSlide('python-slideshow', -1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M11 1L5 8l6 7V1z"/>
+                                    </svg>
+                                </button>
+                                <button class="slide-btn next" onclick="changeSlide('python-slideshow', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M5 1v14l6-7-6-7z"/>
+                                    </svg>
+                                </button>
+                                <div class="slide-indicators">
+                                    <span class="indicator active" onclick="currentSlide('python-slideshow', 1)"></span>
+                                    <span class="indicator" onclick="currentSlide('python-slideshow', 2)"></span>
+                                    <span class="indicator" onclick="currentSlide('python-slideshow', 3)"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>Theme: "Wrong tool for the job" – A tongue-in-cheek website for teaching HTML, but restricted to Python code only. Built entirely in Python (with a pinch of JSON), it embraces the theme by showcasing creative workarounds and unconventional solutions.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/cat-loaf/code-jam-2025/tree/main" target="_blank" class="project-link primary">View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>VeggieInventory</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>A custom inventory management system developed for an SME client, featuring stock tracking, category-based filtering, and automatic updates to their public-facing website with real-time inventory data. This project achieved a 60% reduction in inventory discrepancies and decreased manual errors by over 70%, while providing real-time website integration and a custom category filtering system.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Private Client Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>MakeItAll Productivity Hub</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>A productivity web app integrating a chat system, advanced documentation viewer and summariser, and modular analytics dashboards tailored to user workflows. The platform includes real-time team messaging, advanced documentation viewer, custom analytics dashboards, and helped clients reduce team communication friction while improving deadline adherence by ~30%.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Private Client Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Custom Data Pipeline & CI/CD System</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>Developed and maintained a highly customisable data pipeline ensuring seamless data ingestion, transformation, and delivery. Managed data integration from diverse sources including SFTP, HTTP connections, and multiple cloud platforms. Achieved a 30% decrease in time-to-launch through multi-cloud platform integration, comprehensive testing coverage, and reusable library development.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Private Work Product</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>PixiPainter</h3>
+                        </div>
+                        <div class="project-slideshow" id="pixi-slideshow">
+                            <div class="slideshow-container">
+                                <div class="slide active">
+                                    <img src="public/images/pixi-painter/0.png" alt="PixiPainter Screenshot 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/pixi-painter/1.png" alt="PixiPainter Screenshot 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/pixi-painter/2.png" alt="PixiPainter Screenshot 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/pixi-painter/3.png" alt="PixiPainter Screenshot 4">
+                                </div>
+                                <div class="slide">
+                                    <img src="public/images/pixi-painter/4.png" alt="PixiPainter Screenshot 5">
+                                </div>
+                                <button class="slide-btn prev" onclick="changeSlide('pixi-slideshow', -1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M11 1L5 8l6 7V1z"/>
+                                    </svg>
+                                </button>
+                                <button class="slide-btn next" onclick="changeSlide('pixi-slideshow', 1)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M5 1v14l6-7-6-7z"/>
+                                    </svg>
+                                </button>
+                                <div class="slide-indicators">
+                                    <span class="indicator active" onclick="currentSlide('pixi-slideshow', 1)"></span>
+                                    <span class="indicator" onclick="currentSlide('pixi-slideshow', 2)"></span>
+                                    <span class="indicator" onclick="currentSlide('pixi-slideshow', 3)"></span>
+                                    <span class="indicator" onclick="currentSlide('pixi-slideshow', 4)"></span>
+                                    <span class="indicator" onclick="currentSlide('pixi-slideshow', 5)"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>A Python-based pixel art editor built from scratch, featuring customizable palettes, multiple brush types, and a bespoke file format for saving and loading pixel art. Created as an exploration into 2D graphics programming and custom UI library development. Includes a custom 2D rendering engine, multiple brush types and sizes, customizable color palettes, bespoke file format (.pixi), and layer management system.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/cat-loaf/pixi-painter" target="_blank" class="project-link primary">View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>VSCode Tasks Integration Extension</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>A VS Code extension that organizes workspace tasks in an intuitive tree-view interface within the activity bar. The extension automatically groups tasks by source (npm, CMake, workspace) and type (build, test, deploy) while providing one-click execution with visual status indicators and bulk operations.</p>
+                            <div class="project-links">
+                                <a href="https://marketplace.visualstudio.com/items?itemName=GranthJ.vscode-task-view" target="_blank" class="project-link primary">View on Marketplace</a>
+                                <a href="https://github.com/cat-loaf/vscode-task-view" target="_blank" class="project-link">GitHub Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Personal Portfolio Evolution</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>This website itself represents an ongoing project in web development, responsive design, and personal branding. Built with modern CSS, semantic HTML, and progressive enhancement principles. Features mobile-first responsive design, semantic HTML structure, CSS Grid and Flexbox layouts, progressive enhancement, and performance optimization.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/cat-loaf/cat-loaf" target="_blank" class="project-link primary">View Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#experience">Experience</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="projects">All Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="mailto:jain@granth.one">jain@granth.one</a></li>
+                    <li><a href="https://github.com/cat-loaf" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/granth-jain" target="_blank">LinkedIn</a></li>
+                    <li><a href="/cv" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hey There!</h3>
+                <p>Feel free to reach out if you'd like to connect!</p>
+                <p>Always open to new opportunities and collaborations :)</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Granth Jain. All rights reserved.</p>
+            <p class="font-attribution">
+                Website uses <a href="https://www.dafont.com/alagard.font" target="_blank">Alagard font</a> by Hewett Tsoi
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

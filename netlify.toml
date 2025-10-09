@@ -1,0 +1,25 @@
+# Configuration file for netlify 
+# Build 
+[build]
+functions = "netlify/functions"
+command = "npm run minify"
+publish = "./"
+
+[build.environment]
+NODE_VERSION = "18"
+
+# Frontend stuff
+[[redirects]]
+from = "/"
+to = "/index"
+status = 200
+
+[[redirects]]
+from = "/projects"
+to = "/projects.html"
+status = 200
+
+[[redirects]]
+from = "/cv"
+to = "/public/assets/Granth_Jain_CV.pdf"
+status = 200

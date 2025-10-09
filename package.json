@@ -1,0 +1,14 @@
+{
+    "name": "cat-loaf",
+    "version": "1.0.0",
+    "scripts": {
+        "minify-html": "html-minifier-terser --input-dir=./ --output-dir=./ --file-ext html --collapse-whitespace --remove-comments --minify-js true --minify-css true",
+        "minify-js": "find . -type f -name '*.js' -not -path './node_modules/*' -exec terser {} --compress --mangle --output {} \\;",
+        "minify": "npm run minify-html && npm run minify-js"
+    },
+    "devDependencies": {
+        "html-minifier-terser": "^7.2.0",
+        "clean-css-cli": "^5.6.0",
+        "terser": "^5.30.0"
+    }
+}
