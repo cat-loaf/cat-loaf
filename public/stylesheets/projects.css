@@ -68,7 +68,7 @@
 
 .project-header h3 {
     margin: 0;
-    color: #f00;
+    color: var(--accent-col);
     font-size: 1.3rem;
     line-height: 1.3;
 }

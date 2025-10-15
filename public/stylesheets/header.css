@@ -46,6 +46,10 @@ header {
             color: #333;
         }
     }
+
+    button {
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 762px) {

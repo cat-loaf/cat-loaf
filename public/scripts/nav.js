@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 function toggleNav() {
     if (nav.classList.toggle("navHidden")) {
-        toggleNavButton.innerText = "Menu"
+        toggleNavButton.innerText = "+"
         main.style.marginTop = "8em"
     } else {
-        toggleNavButton.innerText = "Close"
-        main.style.marginTop = "20em"
+        toggleNavButton.innerText = "-"
+        main.style.marginTop = "30em"
     }
 }

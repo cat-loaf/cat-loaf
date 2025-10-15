@@ -1,20 +1,14 @@
-@font-face {
-    font-family: "Alagard";
-    src: url("../fonts/Alagard.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     margin: 0;
     padding: 0;
-    font-family: "Alagard", "Iosevka";
+    font-family: Inter, sans-serif;
+    font-weight: thin;
 }
 
 :root {
     --border: 1.5px solid #888;
     --text-col: #333;
+    --accent-col: hsl(214, 100%, 50%);
 }
 
 button[type="button"] {
