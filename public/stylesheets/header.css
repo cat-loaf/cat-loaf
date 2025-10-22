@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     border-bottom: var(--border);
     box-shadow: var(--shadow-sm);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     letter-spacing: 0.3px;
 
     img {
@@ -60,7 +60,7 @@ header {
         }
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: -2px;
             left: 0;
@@ -75,8 +75,10 @@ header {
         }
     }
 
-    button {
+    button#nav-toggle-button {
         border-radius: 12px;
+        width: 2em;
+        height: 2em;
     }
 }
 
