@@ -24,3 +24,12 @@ from = "/cv"
 to = "/public/assets/Granth_Jain_CV.pdf"
 status = 200
 
+[[redirects]]
+from = "/posts/*"
+to = "/posts.html"
+status = 200
+
+[[redirects]]
+from = "/admin"
+to = "/admin/index.html"
+status = 200

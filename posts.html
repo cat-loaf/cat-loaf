@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/public/stylesheets/header.css">
+    <link rel="stylesheet" href="/public/stylesheets/global.css">
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <link rel="stylesheet" href="/public/stylesheets/footer.css">
+    <link rel="stylesheet" href="/public/stylesheets/posts.css">
+    <!-- marked (markdown parser) via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Code block styling is handled via site CSS (no highlight.js) -->
+    <script src="/public/scripts/nav.js" defer></script>
+    <script defer src="/public/scripts/post.js"></script>
+</head>
+<body>
+    <!-- header copied from index.html -->
+    <header>
+        <div><img id="header-icon" src="/public/images/icon.png" alt="Icon"></div>
+        <nav class="navHidden">
+            <a href="#hero"><div>Home</div></a>
+            <a href="#experience"><div>Experience</div></a>
+            <a href="projects"><div>Projects</div></a>
+            <a href="/posts"><div>Posts</div></a>
+            <button type="button" onclick="toggleNav()" id="nav-toggle-button">+</button>
+        </nav>
+    </header>
+
+    <main id="post-root">
+        <div class="container">
+            <div id="post-error" style="display:none; padding:2rem;">
+                <h2>Post not found</h2>
+                <p>The post you're looking for couldn't be found.</p>
+            </div>
+
+            <article id="post-article" style="display:none;">
+                <header id="post-header">
+                    <h1 id="post-title"></h1>
+                    <p id="post-description" class="post-description"></p>
+                    <img id="post-hero" alt="" style="max-width:100%; display:none;"/>
+                </header>
+                <section id="post-body" class="post-body"></section>
+            </article>
+        </div>
+    </main>
+
+    <!-- footer copied from index.html -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="/posts">Posts</a>
+                    <a href="#projects">Projects</a>
+                    <a href="projects">All Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="mailto:jain@granth.one">jain@granth.one</a></li>
+                    <li><a href="https://github.com/cat-loaf" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/granth-jain" target="_blank">LinkedIn</a></li>
+                    <li><a href="/cv" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hey There!</h3>
+                <p>Feel free to reach out if you'd like to connect!</p>
+                <p>Always open to new opportunities and collaborations :)</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Granth Jain. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/public/scripts/sounds.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+posts/index.json
+node_modules/
+package-lock.json

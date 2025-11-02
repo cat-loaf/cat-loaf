@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — Cat Loaf</title>
+  <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/public/stylesheets/header.css">
+  <link rel="stylesheet" href="/public/stylesheets/global.css">
+  <link rel="stylesheet" href="/public/stylesheets/main.css">
+  <link rel="stylesheet" href="/public/stylesheets/footer.css">
+  <link rel="stylesheet" href="/public/stylesheets/posts.css">
+  <style>
+    /* admin-specific tweaks */
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;}
+    .hidden{display:none}
+    .row{display:flex;gap:0.5rem;align-items:center;margin-bottom:0.5rem}
+    input,select,textarea{padding:0.5rem;border:1px solid #ccc;border-radius:4px}
+    textarea{min-height:240px;width:100%}
+    #preview{border:1px solid #ddd;padding:1rem}
+    img.preview-img{max-width:300px;display:block;margin-top:0.5rem}
+  </style>
+  <script src="/public/scripts/nav.js" defer></script>
+</head>
+<body style="">
+    <!-- header (shared) -->
+    <header>
+        <div><img id="header-icon" src="/public/images/icon.png" alt="Icon"></div>
+        <nav class="navHidden">
+            <a href="/#hero"><div>Home</div></a>
+            <a href="/#experience"><div>Experience</div></a>
+            <a href="/projects"><div>Projects</div></a>
+            <a href="/posts"><div>Posts</div></a>
+            <button type="button" onclick="toggleNav()" id="nav-toggle-button">+</button>
+        </nav>
+    </header>
+
+    <main style="background-color:#1e1e1e; color:#fff ">
+        <div style="display:flex; flex-direction:column; align-items:center; padding:1rem 0;">
+            <h1 style="color:white; text-align:center;">Admin</h1>
+      
+            <div id="loginBox" class="margin-bottom:10rem; ">
+              <h2>Sign In</h2>
+              <div class="row"><input id="user" placeholder="username"></div>
+              <div class="row"><input id="pass" placeholder="password" type="password"></div>
+              <div class="row"><button id="loginBtn" style="background-color: #007bff; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px;">Login</button><span id="loginMsg"></span></div>
+            </div>
+        </div>
+
+      <div id="admin-container"></div>
+
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script src="/public/scripts/sounds.js"></script>
+      <script>
+        const tokenKey = 'admin_jwt_token';
+        let token = localStorage.getItem(tokenKey) || null;
+        function setToken(t){ token = t; if(t) localStorage.setItem(tokenKey,t); else localStorage.removeItem(tokenKey); }
+
+        async function loadAdminUI(){
+          // fetch protected admin UI fragment
+          try{
+            const res = await fetch('/.netlify/functions/adminUI', { headers: { Authorization: token ? 'Bearer ' + token : '' } });
+            if(!res.ok){
+                // unauthorized or error - show returned text or JSON
+                let txt = '';
+                try{ txt = await res.text();
+                  try{ const j = JSON.parse(txt); txt = j.error || txt; }catch(e){}
+                }catch(e){ txt = String(e); }
+                document.getElementById('loginMsg').textContent = txt || 'Please login';
+                return false;
+              }
+              const html = await res.text();
+              const container = document.getElementById('admin-container');
+              container.innerHTML = html;
+              // ensure the markdown renderer script is executed (script tags injected via innerHTML won't run)
+              // load renderer first, then load admin-app to ensure renderAdminMarkdown is available
+              function loadScript(src){ return new Promise((res,rej)=>{ const sc = document.createElement('script'); sc.src = src; sc.defer = true; sc.onload = ()=>res(); sc.onerror = (e)=>rej(e); document.body.appendChild(sc); }); }
+              try{
+                await loadScript('/public/admin/markdown-renderer.js');
+              }catch(e){ console.warn('failed to load markdown-renderer.js', e); }
+              // finally load admin-app which wires the UI
+              try{ await loadScript('/public/admin/admin-app.js'); }catch(e){ console.error('failed to load admin-app.js', e); }
+            return true;
+          }catch(e){ console.error(e); return false; }
+        }
+
+        document.getElementById('loginBtn').addEventListener('click', async ()=>{
+          const user = document.getElementById('user').value;
+          const pass = document.getElementById('pass').value;
+          document.getElementById('loginMsg').textContent = '...';
+          try{
+            const res = await fetch('/.netlify/functions/login', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ user, pass }) });
+            const j = await res.json();
+            if(!res.ok) { document.getElementById('loginMsg').textContent = j.error || 'Login failed'; return; }
+            setToken(j.token);
+            document.getElementById('loginMsg').textContent = 'OK';
+            await loadAdminUI();
+            // hide login box when admin UI loaded
+            document.getElementById('loginBox').classList.add('hidden');
+          }catch(e){ document.getElementById('loginMsg').textContent = String(e); }
+        });
+
+        // If token present, attempt to load admin UI immediately
+        (async ()=>{ if(token) { const ok = await loadAdminUI(); if(ok) document.getElementById('loginBox').classList.add('hidden'); } })();
+      </script>
+
+  <!-- footer (shared) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="/posts">Posts</a>
+          <a href="#projects">Projects</a>
+          <a href="/projects">All Projects</a>
+        </div>
+      </div>
+            
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="mailto:jain@granth.one">jain@granth.one</a></li>
+          <li><a href="https://github.com/cat-loaf" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/granth-jain" target="_blank">LinkedIn</a></li>
+          <li><a href="/cv" target="_blank">Resume</a></li>
+        </ul>
+      </div>
+            
+      <div class="footer-section">
+        <h3>Hey There!</h3>
+        <p>Feel free to reach out if you'd like to connect!</p>
+        <p>Always open to new opportunities and collaborations :)</p>
+      </div>
+    </div>
+        
+    <div class="footer-bottom">
+      <p>&copy; 2025 Granth Jain. All rights reserved.</p>
+    </div>
+  </footer>
+    
+  </main>
+</body>
+</html>

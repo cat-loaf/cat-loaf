@@ -1,0 +1,330 @@
+/* Simple styles for posts pages: spacing, folder list, cards, and back button */
+.container {
+    padding: 1.25rem 1rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.folder-list {
+    display: block;
+    margin-top: 1rem;
+}
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Unified card used for both folder and file posts */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-col);
+    border: var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: var(--shadow-sm);
+    /* subtle pop animation */
+    transition: transform 160ms cubic-bezier(0.2, 0.9, 0.2, 1),
+        box-shadow 160ms cubic-bezier(0.2, 0.9, 0.2, 1);
+    will-change: transform;
+}
+/* hover / keyboard-focus visual pop */
+.post-card:hover,
+.post-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06);
+    z-index: 2;
+}
+.post-card .card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+.card-image {
+    width: 100%;
+    height: 150px;
+    background: var(--bg);
+    display: block;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.card-image.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Placeholder styling for year/number folders */
+.card-image.placeholder.year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--muted);
+    color: var(--text-col);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.02);
+}
+.card-image.placeholder.year .placeholder-text {
+    padding: 0 8px;
+}
+.card-body {
+    padding: 0.75rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1 1 auto;
+}
+.post-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+.post-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin: 0;
+}
+.post-full .post-header {
+    margin-bottom: 1rem;
+}
+.post-full .post-description {
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+.post-body {
+    line-height: 1.7;
+}
+.post-body pre {
+    padding: 0.75rem;
+    border-radius: 8px;
+    overflow: auto;
+}
+.post-body pre code.hljs {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+.post-body pre code.hljs,
+.post-body pre.hljs {
+    background: #0b1220;
+    color: #c9d1d9;
+}
+
+/* Force a dark theme for code blocks even without highlight.js */
+.post-body pre,
+.post-body pre code,
+.post-body code {
+    background: #0b1220;
+    color: #c9d1d9;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+        "Roboto Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+/* Keep pre scrollable for long code lines */
+.post-body pre {
+    overflow: auto;
+}
+/* enforce dark appearance for codeblocks regardless of site theme */
+.post-body pre code.hljs,
+.post-body pre.hljs {
+    background: #0b1220;
+    color: #c9d1d9;
+}
+
+/* Callout styles */
+.callout {
+    border-radius: 8px;
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+    background: var(--card-bg);
+    border-left: 4px solid rgba(0, 0, 0, 0.06);
+}
+.callout .callout-header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+.callout .callout-icon {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-text);
+}
+.callout .callout-title {
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted-text);
+}
+.callout .callout-body {
+    margin-top: 0.25rem;
+}
+.callout-note {
+    background: #eef6ff;
+    border: 1px solid #cfe8ff;
+    color: #0b2540;
+    border-left-color: #6b7280;
+}
+.callout-tip {
+    background: #f0fff4;
+    border: 1px solid #d6f6df;
+    color: #07320d;
+    border-left-color: #10b981;
+}
+.callout-warning {
+    background: #fff8e6;
+    border: 1px solid #ffe2a8;
+    color: #4a2f00;
+    border-left-color: #f59e0b;
+}
+.callout-important {
+    background: #fff0f0;
+    border: 1px solid #ffcecf;
+    color: #4a0b0b;
+    border-left-color: #ef4444;
+}
+.callout-info {
+    background: #f6f7ff;
+    border: 1px solid #d9ddff;
+    color: #06143a;
+    border-left-color: #3b82f6;
+}
+.callout-bug {
+    background: #fff6f8;
+    border: 1px solid #ffd7e0;
+    color: #3b0b1a;
+    border-left-color: #8b5cf6;
+}
+.callout-question {
+    background: #f8fbff;
+    border: 1px solid #dbe9ff;
+    color: #05213f;
+}
+.back-row {
+    margin: 0.75rem 0;
+}
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: transparent;
+    border: var(--border);
+    text-decoration: none;
+    color: var(--text-col);
+}
+.up-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* ensure post-root spacing */
+#post-root {
+    padding-top: 1.5rem;
+    padding-bottom: 7rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    .card-image {
+        height: 120px;
+    }
+}
+@media (min-width: 1200px) {
+    .card-image {
+        height: 180px;
+    }
+}
+
+/* Search / controls */
+.search-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.search-controls input[type="text"] {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+    border: var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+}
+.search-controls select {
+    padding: 0.45rem 0.6rem;
+    border: var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text-col);
+    appearance: none;
+}
+.search-controls .btn-clear {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    border: var(--border);
+    background: transparent;
+    color: var(--text-col);
+    cursor: pointer;
+}
+
+/* Back button (same look as clear) */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    border: var(--border);
+    background: transparent;
+    color: var(--text-col);
+    text-decoration: none;
+}
+
+/* Keep card image area sized even if <img> fails to load */
+.card-image {
+    background: var(--muted);
+    min-height: 150px;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
