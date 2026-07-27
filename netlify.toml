@@ -1,0 +1,7 @@
+[build]
+publish = "."
+
+[[redirects]]
+from = "/cv"
+to = "/Granth%20Jain%20CV.pdf"
+status = 200
