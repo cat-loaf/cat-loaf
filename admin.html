@@ -7,7 +7,9 @@
     <title>CV Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap"
+        rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -131,18 +133,21 @@
         <p class="eyebrow">Protected upload</p>
         <h1>Replace the live CV</h1>
         <p>
-            Upload a new PDF here and the site will publish it at the existing <a href="/cv" target="_blank">/cv</a> link.
+            Upload a new PDF here and the site will publish it at the existing <a href="/cv" target="_blank">/cv</a>
+            link.
             You need both the admin password and your Netlify personal access token.
         </p>
 
         <form id="upload-form">
             <label>
                 Admin password
-                <input id="cv-upload-password" name="cv-upload-password" type="password" autocomplete="current-password" placeholder="CV upload password">
+                <input id="cv-upload-password" name="cv-upload-password" type="password" autocomplete="current-password"
+                    placeholder="CV upload password">
             </label>
             <label>
                 Netlify PAT
-                <input id="netlify-pat" name="netlify-pat" type="password" autocomplete="off" placeholder="Netlify personal access token">
+                <input id="netlify-pat" name="netlify-pat" type="password" autocomplete="off"
+                    placeholder="Netlify personal access token">
             </label>
             <label>
                 New CV PDF
